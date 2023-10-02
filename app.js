@@ -1,36 +1,33 @@
-import https from "https";
-import dotenv from "dotenv";
-import getReq from "./getReq"
+// const http = require("http");
+// import dotenv from "dotenv";
+// const getReq = require("./getReq.js");
+// import postReq from "./postReq.js";
+// import putReq from "./putReq.js";
+// import deleteReq from "./deleteReq.js";
+// import data from "./data/movies.json"
+import http from "http";
+import getReq from "./getReq.js";
 
+function main() {
   try {
+    const PORT = 5001;
 
-
-  const PORT = process.env.PORT || 5000;
-
-  const server = https.createServer((req, res) => {
-    switch (req.method) {
-      case "GET":
-        getReq(req, res);
-        break;
-      case "POST":
-        postReq(req, res);
-        break;
-      case "PUT":
-        putReq(req, res);
-        break;
-      case "DELETE":
-        deleteReq(req, res);
-        break;
-
-      default:
-        res.statusCode = 404;
-        res.send("Not found");
-    }
-  });
-
-  server.listen(PORT, () => {
-    console.log("Server Started");
-  });
-} catch (error) {
-  console.log(error);
+    const server = http.createServer((req, res) => {
+      // req.data = data.json;
+      switch (req.method) {
+        case "GET":
+          getReq(req, res);
+          break;
+        default:
+          console.log("Error 404");
+      }
+    });
+    server.listen(PORT, () => {
+      console.log("Server Started");
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+main();

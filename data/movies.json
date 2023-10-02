@@ -1,5 +1,4 @@
-{
-    
+[
   {
     "name": "Adeel Solangi",
     "language": "Sindhi",
@@ -34,8 +33,8 @@
     "id": "6VTI8X6LL0MMPJCC",
     "bio": "Vivamus id faucibus velit, id posuere leo. Morbi vitae nisi lacinia, laoreet lorem nec, egestas orci. Suspendisse potenti.",
     "version": 6.49
-  }
-   {
+  },
+  {
     "name": "Adile Qadir",
     "language": "Uyghur",
     "id": "F2KEU5L7EHYSYFTT",
@@ -49,4 +48,4 @@
     "bio": "Vivamus id faucibus velit, id posuere leo. Nunc aliquet sodales nunc a pulvinar. Nunc aliquet sodales nunc a pulvinar. Ut viverra quis eros eu tincidunt.",
     "version": 5.9
   }
-}
+]
